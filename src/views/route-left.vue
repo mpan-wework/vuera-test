@@ -1,5 +1,5 @@
 <template>
-  <route-left></route-left>
+  <route-left :key="renderReact"></route-left>
 </template>
 
 <script>
@@ -9,6 +9,16 @@ export default {
   name: 'RouteLeftVue',
   components: {
     RouteLeft
+  },
+  data () {
+    return {
+      renderReact: 0
+    }
+  },
+  beforeRouteEnter (to, from, next) {
+    next((vm) => {
+      vm.renderReact += 1
+    })
   }
 }
 </script>

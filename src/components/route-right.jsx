@@ -6,6 +6,14 @@ export class RouteRight extends React.Component {
     this.state = {}
   }
 
+  componentDidMount () {
+    console.log('componentDidMount in RouteRight')
+  }
+
+  componentDidUpdate () {
+    console.log('componentDidUpdate in RouteRight')
+  }
+
   render () {
     return (
       <div>RouteRight in react</div>
